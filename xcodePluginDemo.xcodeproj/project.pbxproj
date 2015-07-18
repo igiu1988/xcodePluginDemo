@@ -11,6 +11,7 @@
 		D3B9232F1B0D602E004E030A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B9232E1B0D602E004E030A /* Foundation.framework */; };
 		D3B923341B0D602E004E030A /* xcodePluginDemo.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = D3B923331B0D602E004E030A /* xcodePluginDemo.xcscheme */; };
 		D3B923371B0D602E004E030A /* xcodePluginDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B923361B0D602E004E030A /* xcodePluginDemo.m */; };
+		D3B9233F1B0D642A004E030A /* NSView+dump.m in Sources */ = {isa = PBXBuildFile; fileRef = D3B9233E1B0D642A004E030A /* NSView+dump.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		D3B923331B0D602E004E030A /* xcodePluginDemo.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = xcodePluginDemo.xcscheme; path = xcodePluginDemo.xcodeproj/xcshareddata/xcschemes/xcodePluginDemo.xcscheme; sourceTree = SOURCE_ROOT; };
 		D3B923351B0D602E004E030A /* xcodePluginDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xcodePluginDemo.h; sourceTree = "<group>"; };
 		D3B923361B0D602E004E030A /* xcodePluginDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = xcodePluginDemo.m; sourceTree = "<group>"; };
+		D3B9233D1B0D642A004E030A /* NSView+dump.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+dump.h"; sourceTree = "<group>"; };
+		D3B9233E1B0D642A004E030A /* NSView+dump.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+dump.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 			children = (
 				D3B923351B0D602E004E030A /* xcodePluginDemo.h */,
 				D3B923361B0D602E004E030A /* xcodePluginDemo.m */,
+				D3B9233D1B0D642A004E030A /* NSView+dump.h */,
+				D3B9233E1B0D642A004E030A /* NSView+dump.m */,
 				D3B923311B0D602E004E030A /* Supporting Files */,
 			);
 			path = xcodePluginDemo;
@@ -149,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3B923371B0D602E004E030A /* xcodePluginDemo.m in Sources */,
+				D3B9233F1B0D642A004E030A /* NSView+dump.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +279,7 @@
 				D3B9233C1B0D602E004E030A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
