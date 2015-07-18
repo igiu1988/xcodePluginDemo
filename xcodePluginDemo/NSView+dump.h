@@ -10,4 +10,5 @@
 
 @interface NSView (dump)
 -(void)dumpWithIndent:(NSString *)indent;
+- (void)dumpSheets;
 @end

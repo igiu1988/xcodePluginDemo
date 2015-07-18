@@ -34,6 +34,7 @@ static xcodePluginDemo *sharedPlugin;
     return sharedPlugin;
 }
 
+
 - (id)initWithBundle:(NSBundle *)plugin
 {
     if (self = [super init]) {
@@ -72,10 +73,8 @@ static xcodePluginDemo *sharedPlugin;
 // Sample Action, for menu item:
 - (void)doMenuAction
 {
-//    NSAlert *alert = [[NSAlert alloc] init];
-//    [alert setMessageText:@"Hello, World"];
-//    [alert runModal];
     [[[NSApp mainWindow] contentView] dumpWithIndent:@""];
+    [[[NSApp mainWindow] contentView] dumpSheets];
 }
 
 - (void)dealloc
