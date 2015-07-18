@@ -43,25 +43,14 @@
 - (void)dumpSheets{
     if (self.window.sheets.count == 0) {
         NSLog(@"-----------没有sheet------------");
-    }else if (self.window.sheets.count == 1){
-        
-        NSLog(@"-----------有一个sheet dump begin------------");
-        
-        
-        //        NSLog(@"sheet count %lu", (unsigned long)self.window.sheets.count);
-        NSWindow *panel = self.window.sheets[0];
-        //        NSLog(@"sheet class %@",  NSStringFromClass([panel class]));
-        
-        NSString *indent = @"";
-        [panel.contentView dumpWithIndent:indent];
-//        for (NSView *view in [panel.contentView subviews]) {
-//            NSString *subIndent = [NSString stringWithFormat:@"sheet %@%@", indent, ([indent length]/2)%2==0 ? @"| " : @": "];
-//            [view dumpWithIndent:subIndent];
-//        }
-        
-        NSLog(@"-----------有一个sheet dump end------------");
     }else{
-        
+        NSString *indent = @"";
+        for (NSInteger i = 0; i < self.window.sheets.count; i++) {
+            NSLog(@"-----------dump 第%ld个 sheet start------------", i);
+            NSWindow *panel = self.window.sheets[i];
+            [panel.contentView dumpWithIndent:indent];
+            NSLog(@"-----------dump 第%ld个 sheet end--------------", i);
+        }
     }
 }
 

@@ -54,18 +54,17 @@ static xcodePluginDemo *sharedPlugin;
 - (void)applicationDidFinishLaunching:(NSNotification*)noti {
     NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
     if (menuItem) {
-        //            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"dump current window" action:@selector(doMenuAction) keyEquivalent:@""];
-        [actionMenuItem setTarget:self];
-        [[menuItem submenu] addItem:actionMenuItem];
-    }
-    
-    NSMenuItem *helpMenuItem = [[NSApp mainMenu] itemWithTitle:@"Help"];
-    if (helpMenuItem) {
-        //            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-        NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"dump current window" action:@selector(doMenuAction) keyEquivalent:@""];
-        [actionMenuItem setTarget:self];
-        [[helpMenuItem submenu] addItem:actionMenuItem];
+        [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+        
+        NSMenuItem *deumpWindowItem = [[NSMenuItem alloc] initWithTitle:@"dump current window" action:@selector(doMenuAction) keyEquivalent:@"V"];
+        [deumpWindowItem setKeyEquivalentModifierMask: NSAlternateKeyMask];
+        [deumpWindowItem setTarget:self];
+        [[menuItem submenu] addItem:deumpWindowItem];
+        
+        NSMenuItem *dumpSheetItem = [[NSMenuItem alloc] initWithTitle:@"dump sheets" action:@selector(dumpSheets) keyEquivalent:@"S"];
+        [dumpSheetItem setKeyEquivalentModifierMask: NSAlternateKeyMask];
+        [dumpSheetItem setTarget:self];
+        [[menuItem submenu] addItem:dumpSheetItem];
     }
     
 }
@@ -74,6 +73,10 @@ static xcodePluginDemo *sharedPlugin;
 - (void)doMenuAction
 {
     [[[NSApp mainWindow] contentView] dumpWithIndent:@""];
+    
+}
+
+- (void)dumpSheets{
     [[[NSApp mainWindow] contentView] dumpSheets];
 }
 
